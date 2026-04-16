@@ -4,7 +4,6 @@ const library = "https://striveschool-api.herokuapp.com/books";
 //recupero l'API mettendola dentro una costante e dando la funzione fetch("nome const")
 const getLibrary = function () {
   fetch(library)
-    //
     // facciamo un if che se risulta true la "response.ok" ci ritorna la risposta in formato "JSON"
     // invece se false usando -> "throw new Error(response.status)"" richiama il catch
     .then((response) => {
@@ -14,7 +13,7 @@ const getLibrary = function () {
         throw new Error(response.status);
       }
     })
-    // nel caso l' IF sia true creiamo la funzione di ciò che deve succedere nella pagina e cosa deve caricare dal API, nome funzione "data" (nome standard)
+    // nel caso l' IF sia true creiamo la funzione di ciò che deve succedere nella pagina e cosa deve caricare dal API, nome funzione ".then (data)" :nome standard
     .then((data) => {
       const header = document.getElementById("header");
       header.innerHTML = "<h1>Library</h1>";
